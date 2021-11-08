@@ -1,0 +1,464 @@
+<?xml version="1.0" ?>
+<robot name="final" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find final_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find final_description)/urdf/final.trans" />
+<xacro:include filename="$(find final_description)/urdf/final.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03677737387655069 0.03270432426202734 -0.03045287651205207"/>
+    <mass value="0.009866147144623078"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.012570130571740563 0.026203594872335107 -0.029452876512051515"/>
+    <mass value="0.0003205995302988158"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.045424 -0.006365 -0.001"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.045424 -0.006365 -0.001"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="mcp_pitch_v4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.019468397814287698 -1.9744056539705568e-07 -0.00077596614525869"/>
+    <mass value="0.026502861493031278"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="-0.0" iyy="5e-06" iyz="0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.057994 -0.032569 0.028453"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/mcp_pitch_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.057994 -0.032569 0.028453"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/mcp_pitch_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pip_pitch_v5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.021989129020588832 -4.051421050171866e-07 -0.0034283450177695594"/>
+    <mass value="0.028939558966526356"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="-0.0" iyy="6e-06" iyz="0.0" izz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.105238 -0.032569 0.025491"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/pip_pitch_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.105238 -0.032569 0.025491"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/pip_pitch_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dip_link_v5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010010411125340596 -4.050980757161482e-07 -0.0027085656884863647"/>
+    <mass value="0.012847060150780966"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="-0.0" iyy="1e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.155181 -0.032569 0.026046"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/dip_link_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.155181 -0.032569 0.026046"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/dip_link_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tip_link_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.010010766741586768 -4.050978638994729e-07 -0.002708693446896334"/>
+    <mass value="0.012847060150780966"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="-0.0" iyy="1e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.182577 -0.032569 0.025898"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/tip_link_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.182577 -0.032569 0.025898"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/tip_link_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shaft_all_v7_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0011985246424538326 0.00749959488724216 1.0887891061309163e-07"/>
+    <mass value="0.0017774722276548056"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.097238 -0.025069 0.025491"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/shaft_all_v7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.097238 -0.025069 0.025491"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/shaft_all_v7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.091484854916837e-07 -0.004250405112757906 2.2627443207329234e-08"/>
+    <mass value="0.0012484885554907013"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="-0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.105238 -0.036819 0.025491"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.105238 -0.036819 0.025491"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shaft_all_2_v3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0011982007181446652 0.007499594902140125 -1.9849053505341385e-07"/>
+    <mass value="0.0017774722276548065"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.147181 -0.025069 0.026046"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/shaft_all_2_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.147181 -0.025069 0.026046"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/shaft_all_2_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.4775823731216775e-08 0.01024959490214012 -2.847420024626457e-07"/>
+    <mass value="0.0012484885554907013"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="-0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.155181 -0.022319 0.026046"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.155181 -0.022319 0.026046"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shaft_all_2_v3_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0011985563343904493 0.007499594902342227 -3.2624894488395006e-07"/>
+    <mass value="0.0017774722276548065"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.174577 -0.025069 0.025898"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/shaft_all_2_v3_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.174577 -0.025069 0.025898"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/shaft_all_2_v3_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.4084042224713507e-07 0.010249594902342202 -4.125004122793041e-07"/>
+    <mass value="0.0012484885554907013"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="-0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.182577 -0.022319 0.025898"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.182577 -0.022319 0.025898"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component6_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.165179 -0.040069 0.020046"/>
+    <mass value="0.0"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.165179 -0.040069 0.020046"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.165179 -0.040069 0.020046"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component7_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.192576 -0.025069 0.019898"/>
+    <mass value="0.0"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.192576 -0.025069 0.019898"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.192576 -0.025069 0.019898"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component8_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.127212 -0.040069 0.020099"/>
+    <mass value="0.0"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.127212 -0.040069 0.020099"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.127212 -0.040069 0.020099"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component9_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.127212 -0.037569 0.020099"/>
+    <mass value="0.0"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.127212 -0.037569 0.020099"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.127212 -0.037569 0.020099"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Component10_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.127212 -0.029069 0.020099"/>
+    <mass value="0.0"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.127212 -0.029069 0.020099"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.127212 -0.029069 0.020099"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/Component10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.045424 0.006365 0.001"/>
+  <parent link="base_link"/>
+  <child link="Component1_1"/>
+</joint>
+
+<joint name="mcp_yaw" type="continuous">
+  <origin rpy="0 0 0" xyz="0.01257 0.026204 -0.029453"/>
+  <parent link="Component1_1"/>
+  <child link="mcp_pitch_v4_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="Rigid6" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.00425 0.0"/>
+  <parent link="Component2_1"/>
+  <child link="pip_pitch_v5_1"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.01025 0.0"/>
+  <parent link="Component3_1"/>
+  <child link="dip_link_v5_1"/>
+</joint>
+
+<joint name="Rigid10" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.01025 0.0"/>
+  <parent link="Component4_1"/>
+  <child link="tip_link_v1_1"/>
+</joint>
+
+<joint name="mcp_pitch" type="continuous">
+  <origin rpy="0 0 0" xyz="0.039244 -0.0075 0.002962"/>
+  <parent link="mcp_pitch_v4_1"/>
+  <child link="shaft_all_v7_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rigid14" type="fixed">
+  <origin rpy="0 0 0" xyz="0.008 0.01175 0.0"/>
+  <parent link="shaft_all_v7_1"/>
+  <child link="Component2_1"/>
+</joint>
+
+<joint name="pip_pitch" type="continuous">
+  <origin rpy="0 0 0" xyz="0.041943 -0.0075 -0.000555"/>
+  <parent link="pip_pitch_v5_1"/>
+  <child link="shaft_all_2_v3_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rigid21" type="fixed">
+  <origin rpy="0 0 0" xyz="0.008 -0.00275 0.0"/>
+  <parent link="shaft_all_2_v3_1"/>
+  <child link="Component3_1"/>
+</joint>
+
+<joint name="dip_pitch" type="continuous">
+  <origin rpy="0 0 0" xyz="0.019396 -0.0075 0.000148"/>
+  <parent link="dip_link_v5_1"/>
+  <child link="shaft_all_2_v3_2"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid23" type="fixed">
+  <origin rpy="0 0 0" xyz="0.008 -0.00275 0.0"/>
+  <parent link="shaft_all_2_v3_2"/>
+  <child link="Component4_1"/>
+</joint>
+
+<joint name="Rigid24" type="fixed">
+  <origin rpy="0 0 0" xyz="0.009998 0.0075 0.006"/>
+  <parent link="dip_link_v5_1"/>
+  <child link="Component6_1"/>
+</joint>
+
+<joint name="Rigid25" type="fixed">
+  <origin rpy="0 0 0" xyz="0.009999 -0.0075 0.006"/>
+  <parent link="tip_link_v1_1"/>
+  <child link="Component7_1"/>
+</joint>
+
+<joint name="Rigid26" type="fixed">
+  <origin rpy="0 0 0" xyz="0.021974 0.0075 0.005392"/>
+  <parent link="pip_pitch_v5_1"/>
+  <child link="Component8_1"/>
+</joint>
+
+<joint name="Rigid27" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.0025 0.0"/>
+  <parent link="Component8_1"/>
+  <child link="Component9_1"/>
+</joint>
+
+<joint name="Rigid28" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.011 0.0"/>
+  <parent link="Component8_1"/>
+  <child link="Component10_1"/>
+</joint>
+
+</robot>
